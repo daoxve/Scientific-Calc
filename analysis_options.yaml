@@ -1,0 +1,17 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    avoid_print: true
+    prefer_single_quotes: true
+    avoid_redundant_argument_values: true
+    leading_newlines_in_multiline_strings: true
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.locator.dart"
+    - "**/*.logger.dart"
+    - "**/*.router.dart"
+  errors:
+    invalid_annotation_target: ignore
