@@ -1,36 +1,36 @@
 import 'package:scientific_calc/exports.dart';
 
-final kHeadline1 = TextStyle(
+const kHeadline1 = TextStyle(
   fontWeight: FontWeight.bold,
-  fontSize: 25.sp,
+  fontSize: 25,
 );
 
-final kHeadline2 = TextStyle(
+const kHeadline2 = TextStyle(
   fontWeight: FontWeight.w900,
-  fontSize: 22.sp,
+  fontSize: 22,
 );
 
-final kHeadline3 = TextStyle(
+const kHeadline3 = TextStyle(
   fontWeight: FontWeight.w700,
-  fontSize: 21.sp,
+  fontSize: 21,
 );
 
-final kHeadline5 = TextStyle(
+const kHeadline5 = TextStyle(
   fontWeight: FontWeight.w700,
-  fontSize: 18.sp,
+  fontSize: 18,
 );
 
-final kHeadline6 = TextStyle(
+const kHeadline6 = TextStyle(
   fontWeight: FontWeight.w900,
-  fontSize: 13.sp,
+  fontSize: 13,
 );
 
-final kSubtitle1 = TextStyle(
+const kSubtitle1 = TextStyle(
   fontWeight: FontWeight.w400,
-  fontSize: 15.sp,
+  fontSize: 15,
 );
 
-final kSubtitle2 = TextStyle(
+const kSubtitle2 = TextStyle(
   fontWeight: FontWeight.w900,
-  fontSize: 12.sp,
+  fontSize: 12,
 );

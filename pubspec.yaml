@@ -10,9 +10,9 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.2
+  device_preview: ^1.0.0
   flutter:
     sdk: flutter
-  flutter_screenutil: ^5.3.1
   hive_flutter: ^1.1.0
   logger: ^1.1.0
   stacked: ^2.2.8

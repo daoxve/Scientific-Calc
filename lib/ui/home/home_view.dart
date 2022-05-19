@@ -13,10 +13,11 @@ class HomeView extends StatelessWidget {
       viewModelBuilder: () => HomeViewModel(),
       builder: (context, model, child) => Scaffold(
         backgroundColor: theme.backgroundColor,
+        extendBodyBehindAppBar: true,
         appBar: AppBar(
           leading: PopupMenuButton(
             icon: const Icon(Icons.more_vert),
-            iconSize: 25.sp,
+            iconSize: 25,
             itemBuilder: (context) => model.popupItems,
             onSelected: model.popupActions,
             offset: const Offset(35, 50),
@@ -34,7 +35,8 @@ class HomeView extends StatelessWidget {
               child: TopHalf(),
             ),
             Flexible(
-              flex: 3,
+              flex: 2,
+              fit: FlexFit.tight,
               child: BottomHalf(),
             ),
           ],

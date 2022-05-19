@@ -21,7 +21,7 @@ class PlainButton extends StatelessWidget {
       child: Text(
         text,
         style: textTheme.headline3!.copyWith(
-          fontSize: fontSize ?? 22.sp,
+          fontSize: fontSize ?? 22,
           fontWeight: FontWeight.w400,
         ),
       ),

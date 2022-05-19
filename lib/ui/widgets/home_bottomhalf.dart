@@ -14,7 +14,7 @@ class BottomHalf extends HookViewModelWidget<HomeViewModel> {
     bool deg = viewModel.isDeg;
 
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 5.h),
+      padding: const EdgeInsets.fromLTRB(16.0, 5.0, 16.0, 0.0),
       decoration: BoxDecoration(
         color: theme.backgroundColor,
       ),
@@ -132,7 +132,7 @@ class BottomHalf extends HookViewModelWidget<HomeViewModel> {
                       text: '÷',
                       buttonType: ButtonType.special,
                       onTap: viewModel.validateActions,
-                      fontSize: 30.sp,
+                      fontSize: 30,
                     ),
                   ],
                 ),
@@ -183,7 +183,7 @@ class BottomHalf extends HookViewModelWidget<HomeViewModel> {
                       text: '-',
                       buttonType: ButtonType.special,
                       onTap: viewModel.validateActions,
-                      fontSize: 36.sp,
+                      fontSize: 36,
                     ),
                   ],
                 ),
@@ -209,7 +209,7 @@ class BottomHalf extends HookViewModelWidget<HomeViewModel> {
                       text: '+',
                       buttonType: ButtonType.special,
                       onTap: viewModel.validateActions,
-                      fontSize: 28.sp,
+                      fontSize: 28,
                     ),
                   ],
                 ),
@@ -239,7 +239,7 @@ class BottomHalf extends HookViewModelWidget<HomeViewModel> {
                     CircleButton(
                       text: '=',
                       buttonType: ButtonType.equals,
-                      fontSize: 28.sp,
+                      fontSize: 28,
                       onTap: viewModel.validateActions,
                     ),
                   ],

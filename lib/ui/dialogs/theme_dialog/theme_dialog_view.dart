@@ -54,7 +54,7 @@ class _ThemeDialogContent extends StatelessWidget {
         color: theme.backgroundColor,
         borderRadius: BorderRadius.circular(15),
       ),
-      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 24.h),
+      padding: const EdgeInsets.symmetric(horizontal: 16.00, vertical: 24.00),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,7 +72,7 @@ class _ThemeDialogContent extends StatelessWidget {
             title: Text(
               'Light',
               style: textTheme.subtitle1!.copyWith(
-                fontSize: 18.sp,
+                fontSize: 18,
               ),
             ),
             onChanged: (RadioFields? value) {
@@ -89,7 +89,7 @@ class _ThemeDialogContent extends StatelessWidget {
             title: Text(
               'Dark',
               style: textTheme.subtitle1!.copyWith(
-                fontSize: 18.sp,
+                fontSize: 18,
               ),
             ),
             onChanged: (RadioFields? value) {
@@ -106,7 +106,7 @@ class _ThemeDialogContent extends StatelessWidget {
             title: Text(
               'System Default',
               style: textTheme.subtitle1!.copyWith(
-                fontSize: 18.sp,
+                fontSize: 18,
               ),
             ),
             toggleable: true,

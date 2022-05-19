@@ -45,8 +45,8 @@ class _WarningDialogContent extends StatelessWidget {
       alignment: Alignment.topCenter,
       children: [
         Container(
-          margin: EdgeInsets.symmetric(horizontal: 12.w),
-          padding: EdgeInsets.fromLTRB(16.w, 32.h, 16.w, 12.h),
+          margin: const EdgeInsets.symmetric(horizontal: 12),
+          padding: const EdgeInsets.fromLTRB(16.00, 32.00, 16.00, 12.0),
           decoration: BoxDecoration(
             color: theme.backgroundColor,
             borderRadius: BorderRadius.circular(24),
@@ -64,7 +64,7 @@ class _WarningDialogContent extends StatelessWidget {
               Text(
                 request.description ?? '',
                 style: textTheme.headline6!.copyWith(
-                  fontSize: 14.sp,
+                  fontSize: 14,
                   fontWeight: FontWeight.w400,
                 ),
                 textAlign: TextAlign.center,
@@ -108,15 +108,15 @@ class _WarningDialogContent extends StatelessWidget {
             ],
           ),
         ),
-        Positioned(
-          top: -28.h,
-          child: CircleAvatar(
-            minRadius: 16.r,
-            maxRadius: 28.r,
+        const Positioned(
+          top: -28.00,
+          child:  CircleAvatar(
+            minRadius: 16.0,
+            maxRadius: 28.0,
             backgroundColor: kcErrorDark,
             child: Icon(
               Icons.warning_amber,
-              size: 28.sp,
+              size: 28,
               color: Colors.white,
             ),
           ),

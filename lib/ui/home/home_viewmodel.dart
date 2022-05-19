@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:scientific_calc/exports.dart';
-import 'package:scientific_calc/models/search_data.dart';
+import 'package:scientific_calc/core/models/search_data.dart';
 
 class HomeViewModel extends BaseViewModel {
   final logs = getLogger('HomeViewModel');

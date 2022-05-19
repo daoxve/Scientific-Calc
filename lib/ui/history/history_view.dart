@@ -19,30 +19,48 @@ class HistoryView extends StatelessWidget {
           backgroundColor: theme.backgroundColor,
           appBar: AppBar(
             backgroundColor: theme.colorScheme.secondary,
-            leading: GestureDetector(
-              onTap: model.navigateBack,
-              child: Icon(
-                Icons.arrow_back_ios_new,
-                size: 21.sp,
-                color: theme.iconTheme.color,
-              ),
-            ),
-            title: Text(
-              'History',
-              style: textTheme.headline2!.copyWith(
-                fontSize: 20.sp,
-              ),
+            // leading: ,
+            automaticallyImplyLeading: false,
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                GestureDetector(
+                  onTap: model.navigateBack,
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.arrow_back_ios_new,
+                        size: 24,
+                        color: theme.iconTheme.color,
+                      ),
+                      const SizedBox(width: 2),
+                      Text(
+                        'Back',
+                        style: TextStyle(color: theme.iconTheme.color),
+                      )
+                    ],
+                  ),
+                ),
+                const Spacer(),
+                Text(
+                  'History',
+                  style: textTheme.headline2!.copyWith(
+                    fontSize: 20,
+                  ),
+                ),
+                const Spacer(),
+              ],
             ),
             actions: [
               Align(
                 child: GestureDetector(
                   onTap: box.isEmpty ? null : model.showWarningDialog,
                   child: Padding(
-                    padding: EdgeInsets.only(right: 16.w, top: 4.h),
+                    padding: const EdgeInsets.only(right: 16.00, top: 4.0),
                     child: Text(
                       'Clear',
                       style: textTheme.headline4!.copyWith(
-                        fontSize: 15.sp,
+                        fontSize: 15,
                         color: box.isEmpty ? theme.iconTheme.color : kcError,
                       ),
                     ),
@@ -70,7 +88,7 @@ class HistoryView extends StatelessWidget {
                           children: [
                             Icon(
                               Icons.query_stats_sharp,
-                              size: 158.sp,
+                              size: 158,
                               color: theme.iconTheme.color!.withOpacity(0.7),
                             ),
                             Text(
@@ -82,17 +100,20 @@ class HistoryView extends StatelessWidget {
                           ],
                         )
                       : Padding(
-                          padding: EdgeInsets.fromLTRB(16.w, 16.h, 16.w, 20.h),
+                          padding: const EdgeInsets.fromLTRB(
+                              16.00, 16.00, 16.00, 20.0),
                           child: ListView.separated(
                             itemCount: box.length,
                             physics: const BouncingScrollPhysics(),
-                            separatorBuilder: (ctx, i) => SizedBox(height: 10.h),
+                            separatorBuilder: (ctx, i) =>
+                                const SizedBox(height: 10.0),
                             itemBuilder: (context, index) {
                               model.insertAtIndex(index);
-                              var boxIndex = box.getAt((box.length - 1) - index);
+                              var boxIndex =
+                                  box.getAt((box.length - 1) - index);
 
                               return SizedBox(
-                                height: 80.h,
+                                height: 80.00,
                                 child: Card(
                                   elevation: 2,
                                   color: theme.colorScheme.secondary,
@@ -100,11 +121,15 @@ class HistoryView extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(15),
                                   ),
                                   child: ListTile(
-                                    contentPadding:
-                                        EdgeInsets.symmetric(horizontal: 18.w, vertical: 5.h),
+                                    contentPadding: const EdgeInsets.symmetric(
+                                        horizontal: 18.00, vertical: 5.0),
                                     title: Text(
-                                      boxIndex.calcHistory + ' = ' + boxIndex.calcResult,
-                                      style: textTheme.headline1!.copyWith(fontSize: 21.sp),
+                                      boxIndex.calcHistory +
+                                          ' = ' +
+                                          boxIndex.calcResult,
+                                      style: textTheme.headline1!.copyWith(
+                                        fontSize: 21.00,
+                                      ),
                                       overflow: TextOverflow.ellipsis,
                                       maxLines: 2,
                                     ),
@@ -119,19 +144,19 @@ class HistoryView extends StatelessWidget {
               Flexible(
                 child: Container(
                   width: double.maxFinite,
-                  margin: EdgeInsets.fromLTRB(12.w, 0, 12.w, 24.h),
+                  margin: const EdgeInsets.fromLTRB(12.00, 0, 12.00, 24.0),
                   decoration: BoxDecoration(
                     color: theme.colorScheme.secondary,
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: Stack(
                     children: [
-                      Padding(
-                        padding: EdgeInsets.only(left: 24.w, top: 24.h),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 24.00, top: 24.0),
                         child: Text(
                           'Current Figures:',
                           style: TextStyle(
-                            fontSize: 18.sp,
+                            fontSize: 18,
                             fontWeight: FontWeight.w700,
                             color: kcGrey,
                           ),
@@ -140,7 +165,7 @@ class HistoryView extends StatelessWidget {
                       Align(
                         child: box.isNotEmpty
                             ? Padding(
-                                padding: EdgeInsets.only(top: 12.h),
+                                padding: const EdgeInsets.only(top: 12.0),
                                 child: Text(
                                   box.getAt(box.length - 1).calcHistory +
                                       ' = ' +
@@ -149,11 +174,11 @@ class HistoryView extends StatelessWidget {
                                 ),
                               )
                             : Padding(
-                                padding: EdgeInsets.only(top: 12.h),
+                                padding: const EdgeInsets.only(top: 12.0),
                                 child: Text(
                                   'Nothing to show here yet...',
                                   style: textTheme.headline1!.copyWith(
-                                    fontSize: 14.sp,
+                                    fontSize: 14,
                                   ),
                                 ),
                               ),

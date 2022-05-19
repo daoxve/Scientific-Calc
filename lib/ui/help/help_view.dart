@@ -18,22 +18,30 @@ class HelpView extends StatelessWidget {
           slivers: [
             SliverAppBar(
               pinned: true,
-              expandedHeight: 170.h,
+              expandedHeight: 170.00,
               leading: GestureDetector(
-                onTap: model.navigateBack,
-                child: Icon(
-                  Icons.arrow_back_ios_new,
-                  size: 21.sp,
-                  color: theme.iconTheme.color,
+                  onTap: model.navigateBack,
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.arrow_back_ios_new,
+                        size: 24,
+                        color: theme.iconTheme.color,
+                      ),
+                      Text(
+                        'Back',
+                        style: TextStyle(color: theme.iconTheme.color),
+                      )
+                    ],
+                  ),
                 ),
-              ),
               flexibleSpace: FlexibleSpaceBar(
                 title: Text(
                   'Help',
                   style: textTheme.headline1,
                 ),
                 centerTitle: true,
-                titlePadding: EdgeInsetsDirectional.only(bottom: 13.h),
+                titlePadding: const EdgeInsetsDirectional.only(bottom: 13.0),
               ),
               backgroundColor: theme.colorScheme.secondary,
             ),
@@ -48,18 +56,18 @@ class HelpView extends StatelessWidget {
                         'Use your Calculator',
                         textAlign: TextAlign.center,
                         style: textTheme.bodyText1!.copyWith(
-                          fontSize: 30.sp,
+                          fontSize: 30,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
                       Gap.smallH,
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 16.w),
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
                         child: Text(
                           kcHelpParagraph1,
                           textAlign: TextAlign.center,
                           style: textTheme.bodyText1!.copyWith(
-                            fontSize: 18.sp,
+                            fontSize: 18,
                             fontWeight: FontWeight.w400,
                           ),
                         ),
@@ -68,18 +76,18 @@ class HelpView extends StatelessWidget {
                         'Do Advanced Math',
                         textAlign: TextAlign.center,
                         style: textTheme.bodyText1!.copyWith(
-                          fontSize: 30.sp,
+                          fontSize: 30,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
                       Gap.smallH,
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 16.w),
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
                         child: Text(
                           kcHelpParagraph2,
                           textAlign: TextAlign.center,
                           style: textTheme.bodyText1!.copyWith(
-                            fontSize: 18.sp,
+                            fontSize: 18,
                             fontWeight: FontWeight.w400,
                           ),
                         ),
@@ -89,7 +97,7 @@ class HelpView extends StatelessWidget {
                         '© David Coker',
                         textAlign: TextAlign.center,
                         style: textTheme.bodyText1!.copyWith(
-                          fontSize: 15.sp,
+                          fontSize: 15,
                           fontWeight: FontWeight.w700,
                         ),
                       ),

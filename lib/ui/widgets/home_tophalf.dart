@@ -11,48 +11,58 @@ class TopHalf extends HookViewModelWidget<HomeViewModel> {
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
 
-    return Container(
-      height: 370.h,
-      width: double.maxFinite,
-      decoration: BoxDecoration(
-        color: theme.colorScheme.secondary,
+    return Material(
+      color: theme.colorScheme.secondary,
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(30.r),
-          bottomRight: Radius.circular(30.r),
+          bottomLeft: Radius.circular(30.0),
+          bottomRight: Radius.circular(30.0),
         ),
       ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          Padding(
-            padding: EdgeInsets.only(right: 16.r, bottom: 12.h),
-            child: Text(
-              viewModel.history,
-              style: textTheme.headline1!.copyWith(
-                fontSize: 24.sp,
-                color: kcGrey,
+      child: Container(
+        height: 370,
+        width: double.maxFinite,
+        decoration: BoxDecoration(
+          color: theme.colorScheme.secondary,
+          borderRadius: const BorderRadius.only(
+            bottomLeft: Radius.circular(30.0),
+            bottomRight: Radius.circular(30.0),
+          ),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(right: 16.0, bottom: 12.0),
+              child: Text(
+                viewModel.history,
+                style: textTheme.headline1!.copyWith(
+                  fontSize: 24,
+                  color: kcGrey,
+                ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 65.h,
-            width: ScreenUtil().screenWidth - 15.w,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              reverse: true,
-              padding: EdgeInsets.only(bottom: 16.h, right: 16.w, left: 8.w),
-              children: [
-                Text(
-                  viewModel.displayText,
-                  style: textTheme.headline1!.copyWith(
-                    fontSize: 48.sp,
+            SizedBox(
+              height: 65.00,
+              width: MediaQuery.of(context).size.width - 15.00,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                reverse: true,
+                padding: const EdgeInsets.only(
+                    bottom: 16.00, right: 16.00, left: 8.0),
+                children: [
+                  Text(
+                    viewModel.displayText,
+                    style: textTheme.headline1!.copyWith(
+                      fontSize: 48,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
