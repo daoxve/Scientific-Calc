@@ -10,7 +10,6 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.2
-  device_preview: ^1.0.0
   flutter:
     sdk: flutter
   hive_flutter: ^1.1.0
